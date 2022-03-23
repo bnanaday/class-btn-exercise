@@ -1,4 +1,15 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div>
+  <button (click)="onClick()">Display Details!</button>
+  <p *ngIf="showOrHide">
+    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+    adipisci velit. No filler, no fluff, no go. Who dun that? Yowerzers. Hey
+    Arnold! Arnie warnie boo boo.
+  </p>
+  <p
+    *ngFor="let x of log; let i = index"
+    [ngStyle]="{ 'background-color': x > 4 ? 'green' : 'transparent' }"
+    [ngClass] = "x > 4 ? 'special' : ''"
+  >
+    Hello World {{ x }}
+  </p>
+</div>
